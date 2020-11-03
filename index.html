@@ -1,0 +1,106 @@
+<!--
+Copyright 2018 Google LLC. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+==============================================================================
+-->
+
+<!doctype html>
+
+<head>
+  <title>TensorFlow.js: Using a pretrained MobileNet</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../shared/tfjs-examples.css" />
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+
+<body>
+  <div class="tfjs-example-container">
+    <section class='title-area'>
+      <h1>基于分类模型的后台图片整理和图片搜索应用</h1>
+    </section>
+
+    <section>
+      <p class='section-head'>Demo 使用说明</p>
+      <p>
+        Demo 包含后台图片整理， 和图片搜索两个应用展示。可以上传一张，或者多张图片，图片搜索的结果会基于第一张图片如果上传的是图片文件夹或多张图片
+        图片整理的结果会以列表形式给出，并且可以导出为json的文件供后台使用。
+      </p>
+    </section>
+
+    <section>
+      <p class='section-head'>Status</p>
+      <div id="status"></div>
+    </section>
+
+    <section>
+      <p class='section-head'>Model Output</p>
+
+      <div id="file-container" style="display: none">
+        Upload an image: <input type="file" id="files" name="files[]" multiple />
+      </div>
+
+      <div id="predictions"></div>
+      <div id="navcontainer">
+        <ul>
+        <li><a href="#">warterHeater</a></li>
+        <li><a href="#">lunchbox</a></li>
+        <li><a href="#">Electrickettle</a></li>
+        <li><a href="#">NotSure</a></li>
+        <li><a href="#">NotSure</a></li>
+        </ul>
+      </div>
+      <div id="inner-samples-container">
+        <ol id="samples" >
+        </ol>
+      </div>
+
+
+    </section>
+    <section>
+      <img style="display: none" id="cat" src="cat.jpg" width=224 height=224 />
+      <img style="display: none" id="airclean" src="assets/airclean/a.png" width=224 height=224 />
+      <img style="display: none" id="airwarterheater" src="assets/airwarterheater/a.png" width=224 height=224 />
+      <img style="display: none" id="Electrickettle" src="assets/Electrickettle/a.jpg" width=224 height=224 />
+      <img style="display: none" id="hotpot" src="assets/hotpot/b.png" width=224 height=224 />
+      <img style="display: none" id="Juicecup" src="assets/Juicecup/a.jpg" width=224 height=224 />
+      <img style="display: none" id="humidifier" src="assets/humidifier/a.jpg" width=224 height=224 />
+      <img style="display: none" id="lunchbox" src="assets/lunchbox/a.png" width=224 height=224 />
+      <img style="display: none" id="ricecooker" src="assets/ricecooker/a.png" width=224 height=224 />
+      <img style="display: none" id="washingmachine" src="assets/washingmachine/a.png" width=224 height=224 />
+      <img style="display: none" id="waterheater" src="assets/waterheater/a.png" width=224 height=224 />
+    </section>
+    <div id="evaluate">
+      <table id="evaluate-table">
+        <tr>
+          <th>image id</th>
+          <th>product id</th>
+          <th>category name</th>
+          <th>category id</th>
+        </tr>
+        <tbody id="evaluate-tbody">
+          <tr>
+            <td id="imgid"></td>
+            <td id="prodid"></td>
+            <td id="cname"></td>
+            <td id="cid"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="scripts/index.js"></script>
+  </div>
+</body>

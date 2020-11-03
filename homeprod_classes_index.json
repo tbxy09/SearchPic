@@ -1,0 +1,42 @@
+{
+    "0": [
+        "waterheater",
+        ["wha000L","whs014L","whs016l"]
+    ],
+    "1": [
+        "ricecooker",
+        ["GDCF-30X61C","GDCF-40X62C","GDCF-40X80C","GDCF-4004C","GDCF-4006C","GDF-4023C"]
+    ],
+    "2": [
+        "airclean",
+        ["KJ200F-A01","KJ350G-A01","KJ500G-A01"]
+    ],
+    "3": [
+        "airwarterheater",
+        ["ahc260L","ahp000L","ahs200L"]
+    ],
+    "4": [
+        "Juicecup",
+        ["BP-3001Z","BP-3002Z"]
+    ],
+    "5": [
+        "lunchbox",
+        ["4L0A0196","4L0A9589"]
+    ],
+    "6": [
+        "hotpot",
+        ["GH-P130S1"]
+    ],
+    "7": [
+        "washingmachine",
+        ["wmc000LGS","wms000LGW"]
+    ],
+    "8": [
+        "humidifier",
+        ["SC-40X65","SC-40X65"]
+    ],
+    "9": [
+        "Electrickettle",
+        ["GK-1012S","GK-1712S","GW-1601S"]
+    ]
+}
